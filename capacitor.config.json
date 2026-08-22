@@ -1,0 +1,16 @@
+{
+  "appId": "com.xiaji.portfolio",
+  "appName": "作品集·侠迹",
+  "webDir": "public",
+  "server": {
+    "androidScheme": "https",
+    "url": "https://790b8220.r23.cpolar.top",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#f7f3eb"
+    }
+  }
+}

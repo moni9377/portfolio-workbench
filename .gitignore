@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+
+# Environment variables (contains secrets)
+.env
+
+# Data (local uploads & DB stay on D drive, not in repo)
+D:/portfolio-workbench-data/
+portfolio-workbench-data/
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+server.log
+
+# ============================================
+# Android — 保留项目配置，忽略生成文件
+# ============================================
+
+# Gradle 缓存和构建输出
+android/.gradle/
+android/**/build/
+android/app/build/
+!android/app/build/.gitkeep
+
+# 本地属性（含本地 SDK 路径）
+android/local.properties
+
+# IDE
+android/.idea/
+android/*.iml
+android/.navigation/
+android/captures/
+android/*.hprof
+
+# 生成的 capacitor 插件构建
+android/capacitor-cordova-android-plugins/build/
+
+# Electron
+# ============================================
+electron/node_modules/
+electron/dist/
+
+# Dist
+# ============================================
+dist/
+!dist/.gitkeep
+nul
+.github/

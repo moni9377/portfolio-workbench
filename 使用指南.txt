@@ -1,0 +1,118 @@
+═══════════════════════════════════════════
+  作品集 · 侠迹 — 使用指南
+═══════════════════════════════════════════
+
+一、让别人看到你的作品（已完成部署 ✅）
+───────────────────────────────────────────
+
+✅ 当前公网链接（已配置好，可直接分享）：
+   https://5f52534d.r23.cpolar.top
+
+   （https 和 http 均可访问，推荐用 https）
+
+方法：本机运行服务端 + cpolar 内网穿透
+
+步骤（换电脑/重装后按此恢复）：
+
+1. 启动本地服务器
+   双击 D:\portfolio-workbench\start-server.bat
+   （窗口不要关，最小化即可）
+
+2. 配置 cpolar
+   打开命令提示符（cmd），输入：
+   
+   cd /d D:\
+   cpolar.exe authtoken ZmMyNjc1NTUtNmFjNi00MjBlLWI5MjYtNDJlNmI2MjRlOTE1
+
+3. 启动公网隧道
+   在同一个 cmd 窗口里输入：
+   
+   cpolar.exe http 3000
+
+   你会看到类似这样的输出：
+   Tunnel established at https://xxxx.cpolar.top
+
+4. 分享链接
+   把输出的 https://xxxx.cpolar.top 这个链接发给任何人
+   对方打开就能看到你的作品了！
+
+⚠️ 注意：
+   - 你的电脑要保持开机，服务器窗口不能关
+   - 免费版每次重启 cpolar 链接会变
+   - 如需固定链接，需要付费（约10元/月）
+
+
+二、复制 HTML 代码到无思维小程序
+───────────────────────────────────────────
+
+方法1（最简单）：
+   双击 D:\portfolio-workbench\复制代码到剪贴板.bat
+   等待显示"✅ 代码已复制到剪贴板"
+   去无思维小程序代码框里按 Ctrl+V 粘贴
+
+方法2（右键菜单）：
+   右键 index.html → 点"显示更多选项"
+   选择"记事本"打开
+   Ctrl+A 全选，Ctrl+C 复制
+   去小程序里粘贴
+
+方法3（VS Code）：
+   如果"使用 Visual Studio 打开"点了没反应
+   可能是 VS Code 没有正确安装
+   建议使用方法1的 bat 脚本
+
+
+三、安卓安装包（APK）
+───────────────────────────────────────────
+
+Android Studio 官网打不开？
+
+用国内镜像下载：
+https://developer.android.google.cn/studio
+
+下载安装后：
+1. 打开 Android Studio
+2. 选择 File → Open
+3. 打开 D:\portfolio-workbench\android 文件夹
+4. 等待 Gradle 同步完成
+5. 点击菜单 Build → Build APK(s)
+6. APK 文件在：
+   D:\portfolio-workbench\android\app\build\outputs\apk\debug\app-debug.apk
+
+把这个 APK 发给安卓手机就能安装使用了。
+
+
+四、电脑安装包（EXE）
+───────────────────────────────────────────
+
+1. 确保已安装 Node.js
+   下载地址：https://nodejs.org/zh-cn/download/
+   下载 LTS 版本，一路下一步安装
+
+2. 打开命令提示符，依次执行：
+   cd D:\portfolio-workbench\electron
+   npm install
+   npm run electron:build
+
+3. 打包完成后，安装包在：
+   D:\portfolio-workbench\electron\dist\作品集侠迹 Setup.exe
+
+
+五、常见问题
+───────────────────────────────────────────
+
+Q：cpolar 提示 Windows 已保护你的电脑？
+A：点"更多信息" → "仍要运行"
+
+Q：启动服务器后浏览器打不开 localhost:3000？
+A：可能是端口被占用。重启电脑再试。
+
+Q：作品上传后别人看不到？
+A：必须运行服务端 + cpolar，两者都要开着。
+
+Q：数据会丢失吗？
+A：不会。所有数据在 D:\portfolio-workbench-data\ 里，
+   记得定期备份这个文件夹。
+
+
+═══════════════════════════════════════════
