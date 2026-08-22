@@ -187,3 +187,5 @@ docker-compose up -d
 
 **Q：免费平台有限制吗？**
 > A：Render免费版每月有免费额度，长时间不用会休眠。Railway也有类似限制。对于个人作品集展示完全够用。
+
+Deployed to Vercel
